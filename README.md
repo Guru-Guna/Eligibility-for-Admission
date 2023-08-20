@@ -28,35 +28,31 @@ print the result
 ## Program:
 ```
 using System;
-
-namespace ConsoleApp16
+namespace exp1
 {
-    class Program
+    class experiment
     {
         static void Main(string[] args)
         {
-            int phy, math, chem, total1, total2;
-            string name;
-            Console.WriteLine("Enter the student name : ");
-            name = Console.ReadLine();
-            Console.WriteLine("Enter the physics marks : ");
-            phy = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter the chemistry mark : ");
-            chem = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter the Math marks : ");
-            math = Convert.ToInt32(Console.ReadLine());
-            total1 = math + phy + chem;
-            total2 = math + phy;
-            if(math>=65 && phy>=55 && chem >= 50)
+            int physics_mark, maths_mark, chemistry_mark, total;
+            Console.WriteLine("Enter the mark in Physics");
+            physics_mark=Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the mark in maths:");
+            maths_mark=Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the mark in Chemistry:");
+            chemistry_mark=Convert.ToInt32(Console.ReadLine());
+            if(maths_mark>=65 && physics_mark>=55 && chemistry_mark>=50)
             {
-                if(total1>=180 && total2 >= 140)
+                total = maths_mark + physics_mark + chemistry_mark;
+                if(total>=180 || (maths_mark+physics_mark>=140))
                 {
-                    Console.WriteLine(name + "is eligible for engineering admission");
+                    Console.WriteLine("Student is eligible for the admission");
                 }
+                
             }
             else
             {
-                Console.WriteLine(name + "is not eligible for engineering admission");
+                Console.WriteLine("Student is not eligible for the admission");
             }
         }
     }
@@ -66,7 +62,8 @@ namespace ConsoleApp16
 
 
 ## Output:
-![Screenshot 2023-03-17 154319](https://user-images.githubusercontent.com/94288340/225877762-698a3ab0-a1f6-45f2-a9d0-1ee4d0513ef7.png)
+![c#1](https://github.com/Guru-Guna/Eligibility-for-Admission/assets/93427255/52828f09-b407-4d71-af0f-96f5f811470a)
+
 
 ## Result:
 Thus a C# program to find the eligibility for admission to an engineering course is written and executed.
